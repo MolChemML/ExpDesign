@@ -34,3 +34,29 @@ By comparing with conventional optimization algorithms, we offer insights into t
 
 
 ### Solvent design
+
+
+
+
+<a name="contributors"><a>
+## Contributors
+
+Mengjia Zhu, Austin Mroz, Lingfeng Gui, Kim Jelfs, Alberto Bemporad, Ehecatl Antonio del Río Chanona, and Ye Seol Lee
+
+
+This repository is distributed without any warranty. Please cite the paper below if you use it.
+
+<a name="bibliography"><a>
+## Citing the material
+
+<a name="ref1"></a>
+```
+To add (arXiv)
+```
+
+<a name="license"><a>
+## License
+
+MIT
+
+(C) 2023-2024 M. Zhu, A. Bemporad
