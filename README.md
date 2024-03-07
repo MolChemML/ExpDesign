@@ -63,6 +63,13 @@ package for benchmark tests with their default solver parameters. A customized f
 <img src="https://github.com/mjzhu-p/ExpDesign/blob/main/case%20study%20notes/suzuki_rxn.png" alt="drawing" width=60%/>
 </p>
 
+* Design space: fully categorical
+* Parameter to optimize: electrophile (X), nucleophile (Y), base, ligand, and solvent
+* Notes on the code:
+  * Relevant folder: [`suzuki_edbo`](https://github.com/mjzhu-p/olympus/tree/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/suzuki_edbo)
+  * The files needed to run each solver are included.
+  * The results and the files used to generate figures are available at [`z_results`](https://github.com/mjzhu-p/olympus/tree/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/suzuki_edbo/z_results)
+
 ### Crossed barrel
 <p align = "center">
 <img src="https://github.com/mjzhu-p/ExpDesign/blob/main/case%20study%20notes/crossed_barrel_example.png" alt="drawing" width=30%/>
