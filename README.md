@@ -24,7 +24,7 @@ We demonstrate the effectiveness of _PWAS_ in optimizing experimental designs th
 * Optimization of **crossed-barrel design** to augment mechanical toughness (mixed-integer)
 * Solvent design for enhanced **Menschutkin reaction** rate (mixed-integer and categorical with linear constraints)
 
-By comparing with conventional optimization algorithms, we offer insights into the practical applicability of _PWAS_
+By comparing with conventional optimization algorithms, we offer insights into the practical applicability of _PWAS_.
 
 <a name="pwas"></a>
 ## PWAS
@@ -68,15 +68,16 @@ As for the solvent design case study, due to the relatively large number of cons
 </p>
 
 * **Design space**: fully categorical
-* **Parameter to optimize**: electrophile (X), nucleophile (Y), base, ligand, and solvent
+* **Parameters to optimize**: electrophile (X), nucleophile (Y), base, ligand, and solvent
 * **Notes on the code**:
   * Relevant folder: [`suzuki_edbo`](https://github.com/mjzhu-p/olympus/tree/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/suzuki_edbo)
   * The files needed to run each solver are included.
   * The results and the files used to generate figures are available at [`z_results`](https://github.com/mjzhu-p/olympus/tree/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/suzuki_edbo/z_results)
-    
+
+* **Results**: 
 <p align = "center">
-<img src="https://github.com/mjzhu-p/olympus/blob/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/suzuki_edbo/z_results/yield_trace_mean_suzuki_edbo.png" alt="drawing" width=33%/>
-<img src="https://github.com/mjzhu-p/olympus/blob/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/suzuki_edbo/z_results/yield_rank_traces_suzuki_edbo.png" alt="drawing" width=33%/>
+<img src="https://github.com/mjzhu-p/olympus/blob/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/suzuki_edbo/z_results/yield_trace_mean_suzuki_edbo.png" alt="drawing" width=33%/> &nbsp;
+<img src="https://github.com/mjzhu-p/olympus/blob/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/suzuki_edbo/z_results/yield_rank_traces_suzuki_edbo.png" alt="drawing" width=33%/> &nbsp;
 <img src="https://github.com/mjzhu-p/olympus/blob/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/suzuki_edbo/z_results/yield_boxplots_suzuki_edbo.png" alt="drawing" width=33%/>
 </p>
 
@@ -89,13 +90,14 @@ As for the solvent design case study, due to the relatively large number of cons
 </p>
 
 * **Design space**: mixed-integer
-* **Parameter to optimize**:
+* **Parameters to optimize**:
   * number of hollow columns ($n$), twist angle of the columns ($\theta$), outer radius of the columns ($r$), and thickness of the hollow columns ($t$)
 * **Notes on the code**:
   * Relevant folder: [`crossed_barrel`](https://github.com/mjzhu-p/olympus/tree/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/crossed_barrel)
   * The files needed to run each solver are included.
   * The results and the files used to generate figures are available at [`z_results`](https://github.com/mjzhu-p/olympus/tree/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/crossed_barrel/z_results)
-    
+
+* **Results**: 
 <p align = "center">
 <img src="https://github.com/mjzhu-p/olympus/blob/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/crossed_barrel/z_results/toughness_trace_mean_crossedBarrel.png" alt="drawing" width=33%/>
 </p>
@@ -121,17 +123,18 @@ As for the solvent design case study, due to the relatively large number of cons
   * The results and the files used to generate figures are available at [`z_results`](https://github.com/mjzhu-p/ExpDesign/tree/main/solvent%20design%20case%20study/z_results)
 
 
-**Solvent properties of the initial samples (left), the first 10 active-learning samples (middle), and the last 10 active-learning samples (right):**
-* $n^2$: refractive index at 298K, $B$: Abraham’s overall hydrogen-bond basicity, $\epsilon$: dielectric constant at 298K.
+* **Results**
+  * **Solvent properties of the initial samples (left), the first 10 active-learning samples (middle), and the last 10 active-learning samples (right):**
+    * $n^2$: refractive index at 298K, $B$: Abraham’s overall hydrogen-bond basicity, $\epsilon$: dielectric constant at 298K.
 <p align = "center">
 <img src="https://github.com/mjzhu-p/ExpDesign/blob/main/solvent%20design%20case%20study/z_results/figures/radarChart_initialSample.png" alt="drawing" width=30%/> &nbsp;
 <img src="https://github.com/mjzhu-p/ExpDesign/blob/main/solvent%20design%20case%20study/z_results/figures/radarChart_first10AS.png" alt="drawing" width=30%/> &nbsp;
-<img src="https://github.com/mjzhu-p/ExpDesign/blob/main/solvent%20design%20case%20study/z_results/figures/radarChart_last10AS.png" alt="drawing" width=30%/> &nbsp;
+<img src="https://github.com/mjzhu-p/ExpDesign/blob/main/solvent%20design%20case%20study/z_results/figures/radarChart_last10AS.png" alt="drawing" width=30%/> 
 </p>
 
 
-**Bubble chart of chemical properties of the solvents.** 
-* $n^2$: refractive index at 298K, $\epsilon$: dielectric constant at 298K. Abraham’s overall hydrogen-bond basicity is represented by the size of each bubble, with the relevant bubble size scale shown in the legend.
+  * **Bubble chart of chemical properties of the solvents.** 
+    * $n^2$: refractive index at 298K, $\epsilon$: dielectric constant at 298K. Abraham’s overall hydrogen-bond basicity is represented by the size of each bubble, with the relevant bubble size scale shown in the legend.
 <p align = "center">
 <img src="https://github.com/mjzhu-p/ExpDesign/blob/main/solvent%20design%20case%20study/z_results/figures/bubble_chart.png" alt="drawing" width=90%/>
 </p>
