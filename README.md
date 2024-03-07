@@ -123,21 +123,21 @@ As for the solvent design case study, due to the relatively large number of cons
   * The results and the files used to generate figures are available at [`z_results`](https://github.com/mjzhu-p/ExpDesign/tree/main/solvent%20design%20case%20study/z_results)
 
 
-* **Results**
-  * **Solvent properties of the initial samples (left), the first 10 active-learning samples (middle), and the last 10 active-learning samples (right):**
-    * $n^2$: refractive index at 298K, $B$: Abraham’s overall hydrogen-bond basicity, $\epsilon$: dielectric constant at 298K.
+* **Results** 
+  
 <p align = "center">
 <img src="https://github.com/mjzhu-p/ExpDesign/blob/main/solvent%20design%20case%20study/z_results/figures/radarChart_initialSample.png" alt="drawing" width=30%/> &nbsp;
 <img src="https://github.com/mjzhu-p/ExpDesign/blob/main/solvent%20design%20case%20study/z_results/figures/radarChart_first10AS.png" alt="drawing" width=30%/> &nbsp;
 <img src="https://github.com/mjzhu-p/ExpDesign/blob/main/solvent%20design%20case%20study/z_results/figures/radarChart_last10AS.png" alt="drawing" width=30%/> 
 </p>
 
+**Solvent properties of the initial samples (left), the first 10 active-learning samples (middle), and the last 10 active-learning samples (right)**: $n^2$: refractive index at 298K, $B$: Abraham’s overall hydrogen-bond basicity, $\epsilon$: dielectric constant at 298K.
 
-  * **Bubble chart of chemical properties of the solvents.** 
-    * $n^2$: refractive index at 298K, $\epsilon$: dielectric constant at 298K. Abraham’s overall hydrogen-bond basicity is represented by the size of each bubble, with the relevant bubble size scale shown in the legend.
 <p align = "center">
 <img src="https://github.com/mjzhu-p/ExpDesign/blob/main/solvent%20design%20case%20study/z_results/figures/bubble_chart.png" alt="drawing" width=90%/>
 </p>
+
+**Bubble chart of chemical properties of the solvents**: $n^2$: refractive index at 298K, $\epsilon$: dielectric constant at 298K. Abraham’s overall hydrogen-bond basicity is represented by the size of each bubble, with the relevant bubble size scale shown in the legend.
 
 <a name="contributors"><a>
 ## Authors
