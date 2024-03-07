@@ -28,7 +28,10 @@ By comparing with conventional optimization algorithms, we offer insights into t
 
 <a name="pwas"></a>
 ## PWAS
-The package is available in the [repository](https://github.com/mjzhu-p/PWAS)
+The package is available in the [repository](https://github.com/mjzhu-p/PWAS), which can be installed via the following:
+~~~code
+pip install pwasopt
+~~~
 
 The flowchart of the solver is shown here:
 <p align = "center">
@@ -48,11 +51,11 @@ For Suzuki coupling and crossed barrel case studies, we compare the performances
 * _Random Search_
 * [_Genetic_](https://github.com/DEAP/deap)
 * [_Hyperopt_](https://github.com/hyperopt/hyperopt) (tpe)
-* [_Botorch_](https://github.com/pytorch/botorch)
-* [_EDBO_](https://github.com/b-shields/edbo)
+* [_Botorch_](https://github.com/pytorch/botorch) (BO with GP)
+* [_EDBO_](https://github.com/b-shields/edbo) (BO with GP trained on reaction optimization data)
 
 We note that solver _Random Search_, _Genetic_, _Hyperopt_, and _BoTorch_ have been interfaced in the [_Olympus_](https://github.com/aspuru-guzik-group/olympus) package; therefore, we use the algorithmic structure implemented in the
-package for benchmark tests with their default solver parameters. A customized forked version tailored for our testing is also available on GitHub at https://github.com/mjzhu-p/olympus/tree/pwas_comp (Branch “pwas_comp“).
+package for benchmark tests with their default solver parameters. A customized forked version tailored for our testing is also available on GitHub at https://github.com/mjzhu-p/olympus/tree/pwas_comp (Branch “pwas_comp“), which you can see all the modifications. Note, some modifications are only necessary for Windows systems.
 
 
 ### Suzuki coupling
