@@ -57,25 +57,38 @@ For Suzuki coupling and crossed barrel case studies, we compare the performances
 We note that solver _Random Search_, _Genetic_, _Hyperopt_, and _BoTorch_ have been interfaced in the [_Olympus_](https://github.com/aspuru-guzik-group/olympus) package; therefore, we use the algorithmic structure implemented in the
 package for benchmark tests with their default solver parameters. A customized forked version tailored for our testing is also available on GitHub at https://github.com/mjzhu-p/olympus/tree/pwas_comp (Branch “pwas_comp“), which you can see all the modifications. Note, some modifications are only necessary for Windows systems.
 
+The tests were repeated **30** times. Within each run, the maximum iteration was set to **50**, with 10 initial samples.
+
 
 ### Suzuki coupling
+
 <p align = "center">
 <img src="https://github.com/mjzhu-p/ExpDesign/blob/main/case%20study%20notes/suzuki_rxn.png" alt="drawing" width=60%/>
 </p>
 
-* Design space: fully categorical
-* Parameter to optimize: electrophile (X), nucleophile (Y), base, ligand, and solvent
-* Notes on the code:
+* **Design space**: fully categorical
+* **Parameter to optimize**: electrophile (X), nucleophile (Y), base, ligand, and solvent
+* **Notes on the code**:
   * Relevant folder: [`suzuki_edbo`](https://github.com/mjzhu-p/olympus/tree/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/suzuki_edbo)
   * The files needed to run each solver are included.
   * The results and the files used to generate figures are available at [`z_results`](https://github.com/mjzhu-p/olympus/tree/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/suzuki_edbo/z_results)
+    
+<p align = "center">
+<img src="https://github.com/mjzhu-p/olympus/blob/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/suzuki_edbo/z_results/yield_trace_mean_suzuki_edbo.png" alt="drawing" width=33%/>
+<img src="https://github.com/mjzhu-p/olympus/blob/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/suzuki_edbo/z_results/yield_rank_traces_suzuki_edbo.png" alt="drawing" width=33%/>
+<img src="https://github.com/mjzhu-p/olympus/blob/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/suzuki_edbo/z_results/yield_boxplots_suzuki_edbo.png" alt="drawing" width=33%/>
+</p>
+
+
 
 ### Crossed barrel
+
 <p align = "center">
 <img src="https://github.com/mjzhu-p/ExpDesign/blob/main/case%20study%20notes/crossed_barrel_example.png" alt="drawing" width=30%/>
 </p>
 
 ### Solvent design
+
 <p align = "center">
 <img src="https://github.com/mjzhu-p/ExpDesign/blob/main/case%20study%20notes/menschutkin%20rxn.png" alt="drawing" width=60%/>
 </p>
