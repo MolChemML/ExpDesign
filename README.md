@@ -59,6 +59,7 @@ package for benchmark tests with their default solver parameters. A customized f
 
 The tests were repeated **30** times. Within each run, the maximum iteration was set to **50**, with 10 initial samples.
 
+As for the solvent design case study, due to the relatively large number of constraints involved, comparisons with the aforementioned solvers are impractical, instead, it is compared with a recently proposed [_DoE-QM-CAMD_ method](https://www.sciencedirect.com/science/article/pii/S0098135423002156#sec4).
 
 ### Suzuki coupling
 
@@ -105,6 +106,19 @@ The tests were repeated **30** times. Within each run, the maximum iteration was
 <img src="https://github.com/mjzhu-p/ExpDesign/blob/main/case%20study%20notes/menschutkin%20rxn.png" alt="drawing" width=60%/>
 </p>
 
+* **Design space**: mixed-integer and categorical
+* **Parameter to optimize**:
+  * 46 integer variables indicating the number of each atom group present in the designed solvent
+  * 1 auxiliary categorical variable to delineate the solvent's structure (acrylic, monocyclic, bicyclic)
+  * 7 auxiliary binary variables for structure-related constraints
+* **Notes on the code**:
+  * Relevant folder: [`crossed_barrel`](https://github.com/mjzhu-p/olympus/tree/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/crossed_barrel)
+  * The files needed to run each solver are included.
+  * The results and the files used to generate figures are available at [`z_results`](https://github.com/mjzhu-p/olympus/tree/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/crossed_barrel/z_results)
+    
+<p align = "center">
+<img src="https://github.com/mjzhu-p/olympus/blob/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/crossed_barrel/z_results/toughness_trace_mean_crossedBarrel.png" alt="drawing" width=33%/>
+</p>
 
 
 <a name="contributors"><a>
