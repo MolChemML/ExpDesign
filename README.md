@@ -46,12 +46,12 @@ where [_PARC_](https://github.com/bemporad/PyPARC) is the package used to fit th
 ## Case studies
 For Suzuki coupling and crossed barrel case studies, we compare the performances of _PWAS_ with the following solvers:
 * _Random Search_
-* _Genetic_
-* [_Hyperopt_]() (tpe)
-* [_Botorch_]()
-* [_EDBO_]()
+* [_Genetic_](https://github.com/DEAP/deap)
+* [_Hyperopt_](https://github.com/hyperopt/hyperopt) (tpe)
+* [_Botorch_](https://github.com/pytorch/botorch)
+* [_EDBO_](https://github.com/b-shields/edbo)
 
-We note that solver _Random Search_, _Genetic_, _Hyperopt_, and _BoTorch_ have been interfaced in the [_Olympus_]() package; therefore, we use the algorithmic structure implemented in the
+We note that solver _Random Search_, _Genetic_, _Hyperopt_, and _BoTorch_ have been interfaced in the [_Olympus_](https://github.com/aspuru-guzik-group/olympus) package; therefore, we use the algorithmic structure implemented in the
 package for benchmark tests with their default solver parameters. A customized forked version tailored for our testing is also available on GitHub at https://github.com/mjzhu-p/olympus/tree/pwas_comp (Branch “pwas_comp“).
 
 
