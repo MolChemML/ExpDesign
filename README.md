@@ -26,6 +26,8 @@ We demonstrate the effectiveness of _PWAS_ in optimizing experimental designs th
 
 By comparing with conventional optimization algorithms, we offer insights into the practical applicability of _PWAS_.
 
+We refer readers to the [**manuscript**](toadd) for detailed discussions. 
+
 <a name="pwas"></a>
 ## PWAS
 The package is available in the [repository](https://github.com/mjzhu-p/PWAS), which can be installed via the following:
