@@ -4,9 +4,11 @@
 
 * [Description](#description)
 
+* [PWAS](#pwas)
+  
 * [Case studies](#casestudies)
 
-* [Contributors](#contributors)
+* [Authors](#contributors)
 
 * [Citing ](#bibliography)
 
@@ -24,22 +26,44 @@ We demonstrate the effectiveness of _PWAS_ in optimizing experimental designs th
 
 By comparing with conventional optimization algorithms, we offer insights into the practical applicability of _PWAS_
 
+<a name="pwas"></a>
+## PWAS
+The package is available in the [repository](https://github.com/mjzhu-p/PWAS)
+
+The flowchart of the solver is shown here:
+<p align = "center">
+<img src="https://github.com/mjzhu-p/ExpDesign/blob/main/case%20study%20notes/pwas%20flowchart.png" alt="drawing" width=60%/>
+</p>
+
+where [_PARC_](https://github.com/bemporad/PyPARC) is the package used to fit the surrogate, whose flowchart is shown below:
+<p align = "center">
+<img src="https://github.com/mjzhu-p/ExpDesign/blob/main/case%20study%20notes/parc_flowchart.png" alt="drawing" width=60%/>
+</p>
+
+
+
 <a name="casestudies"></a>
 ## Case studies
 
 ### Suzuki coupling
-
+<p align = "center">
+<img src="https://github.com/mjzhu-p/ExpDesign/blob/main/case%20study%20notes/suzuki_rxn.png" alt="drawing" width=60%/>
+</p>
 
 ### Crossed barrel
-
+<p align = "center">
+<img src="https://github.com/mjzhu-p/ExpDesign/blob/main/case%20study%20notes/crossed_barrel_example.png" alt="drawing" width=30%/>
+</p>
 
 ### Solvent design
-
+<p align = "center">
+<img src="https://github.com/mjzhu-p/ExpDesign/blob/main/case%20study%20notes/menschutkin%20rxn.png" alt="drawing" width=60%/>
+</p>
 
 
 
 <a name="contributors"><a>
-## Contributors
+## Authors
 
 Mengjia Zhu, Austin Mroz, Lingfeng Gui, Kim Jelfs, Alberto Bemporad, Ehecatl Antonio del Río Chanona, and Ye Seol Lee
 
@@ -58,5 +82,3 @@ To add (arXiv)
 ## License
 
 MIT
-
-(C) 2023-2024 M. Zhu, A. Bemporad
