@@ -20,9 +20,9 @@
 Experimental design aims to efficiently collect informative data and derive meaningful conclusions while operating within resource constraints. We propose the use of [_PWAS_](https://github.com/mjzhu-p/PWAS) (Piecewise Affine Surrogate-based optimization), designed to address the challenges posed by mixed-variable experimental designs. _PWAS_ enables the direct incorporation of discrete and mixed-variable decision variables, facilitating a more realistic representation of real-world problems. Moreover, _PWAS_ accommodates linear equality and inequality constraints commonly encountered in physical systems, ensuring feasible solutions are proposed. 
 
 We demonstrate the effectiveness of _PWAS_ in optimizing experimental designs through three case studies, each with a different size of design space and numerical complexity: 
-* optimization of reaction conditions for Suzuki–Miyaura cross-coupling (fully categorical), 
-* optimization of crossed-barrel design to augment mechanical toughness (mixed-integer), 
-* solvent design for enhanced Menschutkin reaction rate (mixed-integer and categorical with linear constraints).
+* Optimization of reaction conditions for **Suzuki–Miyaura cross-coupling** (fully categorical) 
+* Optimization of **crossed-barrel design** to augment mechanical toughness (mixed-integer)
+* Solvent design for enhanced **Menschutkin reaction** rate (mixed-integer and categorical with linear constraints)
 
 By comparing with conventional optimization algorithms, we offer insights into the practical applicability of _PWAS_
 
@@ -59,7 +59,7 @@ package for benchmark tests with their default solver parameters. A customized f
 
 The tests were repeated **30** times. Within each run, the maximum iteration was set to **50**, with 10 initial samples.
 
-As for the solvent design case study, due to the relatively large number of constraints involved, comparisons with the aforementioned solvers are impractical, instead, it is compared with a recently proposed [_DoE-QM-CAMD_ method](https://www.sciencedirect.com/science/article/pii/S0098135423002156#sec4).
+As for the solvent design case study, due to the relatively large number of constraints involved, comparisons with the aforementioned solvers are impractical, instead, it is compared with a recently proposed [_DoE-QM-CAMD_](https://www.sciencedirect.com/science/article/pii/S0098135423002156#sec4)  method.
 
 ### Suzuki coupling
 
@@ -119,14 +119,19 @@ As for the solvent design case study, due to the relatively large number of cons
   * Relevant folder: [`solvent design case study`](https://github.com/mjzhu-p/ExpDesign/tree/main/solvent%20design%20case%20study)
   * The files needed to run _PWAS_ are included (`main.py`).
   * The results and the files used to generate figures are available at [`z_results`](https://github.com/mjzhu-p/ExpDesign/tree/main/solvent%20design%20case%20study/z_results)
-    
+
+
+**Solvent properties of the initial samples (left), the first 10 active-learning samples (middle), and the last 10 active-learning samples (right):**
+* $n^2$: refractive index at 298K, $B$: Abraham’s overall hydrogen-bond basicity, $\epsilon$: dielectric constant at 298K.
 <p align = "center">
-<img src="https://github.com/mjzhu-p/ExpDesign/blob/main/solvent%20design%20case%20study/z_results/figures/radarChart_initialSample.png" alt="drawing" width=33%/>
-<img src="https://github.com/mjzhu-p/ExpDesign/blob/main/solvent%20design%20case%20study/z_results/figures/radarChart_first10AS.png" alt="drawing" width=33%/>
-<img src="https://github.com/mjzhu-p/ExpDesign/blob/main/solvent%20design%20case%20study/z_results/figures/radarChart_last10AS.png" alt="drawing" width=33%/>
+<img src="https://github.com/mjzhu-p/ExpDesign/blob/main/solvent%20design%20case%20study/z_results/figures/radarChart_initialSample.png" alt="drawing" width=30%/> &nbsp;
+<img src="https://github.com/mjzhu-p/ExpDesign/blob/main/solvent%20design%20case%20study/z_results/figures/radarChart_first10AS.png" alt="drawing" width=30%/> &nbsp;
+<img src="https://github.com/mjzhu-p/ExpDesign/blob/main/solvent%20design%20case%20study/z_results/figures/radarChart_last10AS.png" alt="drawing" width=30%/> &nbsp;
 </p>
 
 
+**Bubble chart of chemical properties of the solvents.** 
+* $n^2$: refractive index at 298K, $\epsilon$: dielectric constant at 298K. Abraham’s overall hydrogen-bond basicity is represented by the size of each bubble, with the relevant bubble size scale shown in the legend.
 <p align = "center">
 <img src="https://github.com/mjzhu-p/ExpDesign/blob/main/solvent%20design%20case%20study/z_results/figures/bubble_chart.png" alt="drawing" width=90%/>
 </p>
