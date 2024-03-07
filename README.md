@@ -87,6 +87,18 @@ The tests were repeated **30** times. Within each run, the maximum iteration was
 <img src="https://github.com/mjzhu-p/ExpDesign/blob/main/case%20study%20notes/crossed_barrel_example.png" alt="drawing" width=30%/>
 </p>
 
+* **Design space**: mixed-integer
+* **Parameter to optimize**:
+  * number of hollow columns ($n$), twist angle of the columns ($\theta$), outer radius of the columns ($r$), and thickness of the hollow columns ($t$)
+* **Notes on the code**:
+  * Relevant folder: [`crossed_barrel`](https://github.com/mjzhu-p/olympus/tree/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/crossed_barrel)
+  * The files needed to run each solver are included.
+  * The results and the files used to generate figures are available at [`z_results`](https://github.com/mjzhu-p/olympus/tree/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/crossed_barrel/z_results)
+    
+<p align = "center">
+<img src="https://github.com/mjzhu-p/olympus/blob/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/crossed_barrel/z_results/toughness_trace_mean_crossedBarrel.png" alt="drawing" width=33%/>
+</p>
+
 ### Solvent design
 
 <p align = "center">
