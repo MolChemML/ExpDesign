@@ -71,7 +71,7 @@ As for the solvent design case study, due to the relatively large number of cons
 
 * **Design space**: fully categorical
 * **Optimization goal**: to identify optimial combinatorial sets of precursors that can **_maximize the yield_** of the desired product
-* **Parameters to optimize**: electrophile (X), nucleophile (Y), base, ligand, and solvent
+* **Parameters to optimize**: aryl halide (X), boronic acid derivative (Y), base, ligand, and solvent
 * **Notes on the code**:
   * Relevant folder: [`suzuki_edbo`](https://github.com/mjzhu-p/olympus/tree/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/suzuki_edbo)
   * The files needed to run each solver are included.
