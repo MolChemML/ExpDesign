@@ -63,13 +63,14 @@ The tests were repeated **30** times. Within each run, the maximum iteration was
 
 As for the solvent design case study, due to the relatively large number of constraints involved, comparisons with the aforementioned solvers are impractical, instead, it is compared with a recently proposed [_DoE-QM-CAMD_](https://www.sciencedirect.com/science/article/pii/S0098135423002156#sec4)  method.
 
-### Suzuki coupling
+### Suzuki–Miyaura cross-coupling
 
 <p align = "center">
 <img src="https://github.com/mjzhu-p/ExpDesign/blob/main/case%20study%20notes/suzuki_rxn.png" alt="drawing" width=60%/>
 </p>
 
 * **Design space**: fully categorical
+* **Optimization goal**: to identify optimial combinatorial sets of precursors that can **_maximize the yield_** of the desired product
 * **Parameters to optimize**: electrophile (X), nucleophile (Y), base, ligand, and solvent
 * **Notes on the code**:
   * Relevant folder: [`suzuki_edbo`](https://github.com/mjzhu-p/olympus/tree/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/suzuki_edbo)
@@ -92,6 +93,7 @@ As for the solvent design case study, due to the relatively large number of cons
 </p>
 
 * **Design space**: mixed-integer
+* **Optimization goal**: to identify optimial combinatorial sets of structure parameters that can **_maximize the toughness_** of the resulting crossed-barrel strucure while not exceeding a specified force threshold
 * **Parameters to optimize**:
   * number of hollow columns ($n$), twist angle of the columns ($\theta$), outer radius of the columns ($r$), and thickness of the hollow columns ($t$)
 * **Notes on the code**:
@@ -111,6 +113,7 @@ As for the solvent design case study, due to the relatively large number of cons
 </p>
 
 * **Design space**: mixed-integer and categorical
+* **Optimization goal**: to identify optimial solvent compositions to **_enhance the reaction rate_** of the Menschutkin reaction of phenacyl bromide and pyridine
 * **Variables to optimize**:
   * 46 integer variables indicating the number of each atom group present in the designed solvent
   * 1 auxiliary categorical variable to delineate the solvent's structure (acrylic, monocyclic, bicyclic)
