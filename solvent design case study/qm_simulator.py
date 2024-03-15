@@ -1,3 +1,5 @@
+# Return the ln(k) value given the structure of the solvent
+
 import pandas as pd
 import numpy as np
 import sys
@@ -14,7 +16,6 @@ def get_qm_calculatedValue(x_complete):
 
     Return:
         ln(k) value calculated using quantum mechanical method (Reference: Gui, 2023)
-        TODO: need to update the comments
     """
 
     x = np.round(x_complete[:46],decimals=1)
