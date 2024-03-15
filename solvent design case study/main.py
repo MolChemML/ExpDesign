@@ -1,3 +1,6 @@
+# run PWAS to solve the case study
+
+
 from pwasopt.main_pwas import PWAS # pip install pwasopt; https://github.com/mjzhu-p/PWAS
 from pwasopt.categorical_encoder import cat_encoder
 import numpy as np
