@@ -43,14 +43,16 @@ To run the case studies, the following steps need to be followed:
 
 First, install the [_PWAS_](https://github.com/mjzhu-p/PWAS) package. 
   * 🔴IMPORTANT: there are **external** dependencies of _PWAS_. See the package [repository](https://github.com/mjzhu-p/PWAS) for the detailed installation instructions for the MILP solvers used by _PWAS_. You can either obtain a free [academic license](https://www.gurobi.com/academia/academic-program-and-licenses/) (if applicable) for [`GUROBI`](https://support.gurobi.com/hc/en-us/articles/14799677517585-Getting-Started-with-Gurobi-Optimizer) or download the free [`GLPK`](https://stackoverflow.com/questions/17513666/installing-glpk-gnu-linear-programming-kit-on-windows) package. We used `GUROBI` for our case studies.
+  * See an overview of _PWAS_ at [this section](#pwas)
 
 Second, to run the case studies, you need to include the following additional packages to load the dataset and export the results:
 * [pandas](https://pypi.org/project/pandas/) >= 2.1.0
 * [openpyxl](https://pypi.org/project/openpyxl/) >= 3.1.2
 
 Other notes:
+* For the information of each case study, please see the relevant folder noted at [Case studies](#casestudies)
 * We used the [_Olympus_](https://github.com/aspuru-guzik-group/olympus) package to run comparison studies. Please see the [forked version](https://github.com/mjzhu-p/olympus/tree/pwas_comp) for the relevant updates required to run the case studies.
-    * 🔴IMPORTANT: _Olympus_ require tensorflow==1.15, therefore, **python version < 3.8 is required **
+    * 🔴IMPORTANT: _Olympus_ require tensorflow==1.15, therefore, **python version < 3.8 is required**
     * The `yml` file used by the authors to run the comparison studies is included: [`olympus_pwas_comp.yml`](https://github.com/MolChemML/ExpDesign/blob/main/utils/olympus_pwas_comp.yml)
 
 <a name="pwas"></a>
@@ -74,15 +76,15 @@ where [_PARC_](https://github.com/bemporad/PyPARC) is the package used to fit th
 
 <a name="casestudies"></a>
 ## Case studies
-For Suzuki coupling and crossed barrel case studies, we compare the performances of _PWAS_ with the following solvers:
-* _Random Search_
+For Suzuki coupling and crossed barrel case studies, we compare the performances of _PWAS_ with the algorithms implemented in the following packages:
 * [_Genetic_](https://github.com/DEAP/deap)
 * [_Hyperopt_](https://github.com/hyperopt/hyperopt) (tpe)
 * [_Botorch_](https://github.com/pytorch/botorch) (BO with GP)
 * [_EDBO_](https://github.com/b-shields/edbo) (BO with GP trained on reaction optimization data)
+Additionally, we also consider _Random Search_ as a baseline
 
-We note that solver _Random Search_, _Genetic_, _Hyperopt_, and _BoTorch_ have been interfaced in the [_Olympus_](https://github.com/aspuru-guzik-group/olympus) package; therefore, we use the algorithmic structure implemented in the
-package for benchmark tests with their default solver parameters. A customized forked version tailored for our testing is also available on GitHub at https://github.com/mjzhu-p/olympus/tree/pwas_comp (Branch “pwas_comp“), which you can see all the modifications. Note, some modifications are only necessary for Windows systems.
+We note that _Random Search_, _Genetic_, _Hyperopt_, and _BoTorch_ have been interfaced in the [_Olympus_](https://github.com/aspuru-guzik-group/olympus) package; therefore, we use the algorithmic structure implemented in the
+package for benchmark tests with their default solver parameters. A customized forked version tailored for our testing is also available on GitHub at \url{https://github.com/mjzhu-p/olympus/tree/pwas_comp} (Branch “pwas_comp“), which you can see all the modifications. Note, some modifications are only necessary for Windows systems.
 
 The tests were repeated **30** times. Within each run, the maximum iteration was set to **50**, with 10 initial samples.
 
@@ -99,7 +101,10 @@ As for the solvent design case study, due to the relatively large number of cons
 * **Parameters to optimize**: aryl halide (X), boronic acid derivative (Y), base, ligand, and solvent
 * **Notes on the code**:
   * Relevant folder: [`suzuki_edbo`](https://github.com/mjzhu-p/olympus/tree/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/suzuki_edbo)
-  * The files needed to run each solver are included.
+  * The files needed to run each optimization method are included:
+      * `run_xx.py`: run xx opt. method to solve the case study
+      * for  _Random Search_, _Genetic_, _Hyperopt_, and _BoTorch_, `run_xx.py` files are based on the files included in the [_Olympus_](https://github.com/mjzhu-p/olympus/tree/pwas_comp/case_studies/case_study_2_suzuki) package
+      * for _EDBO_, `run_edbo.py` is based on the file included in the [_EDBO_](https://github.com/b-shields/edbo/blob/master/experiments/edbo_demo_and_simulations.ipynb) package
   * The results and the files used to generate figures are available at [`z_results`](https://github.com/mjzhu-p/olympus/tree/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/suzuki_edbo/z_results)
 
 * **Results**: 
@@ -124,6 +129,8 @@ As for the solvent design case study, due to the relatively large number of cons
 * **Notes on the code**:
   * Relevant folder: [`crossed_barrel`](https://github.com/mjzhu-p/olympus/tree/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/crossed_barrel)
   * The files needed to run each solver are included.
+      * `corssed_barrel_othersolvers.py`:  run  _Random Search_, _Genetic_, _Hyperopt_, and _BoTorch_ to solve the case study. This file is based on the file included in the [_Olympus_](https://github.com/mjzhu-p/olympus/blob/pwas_comp/case_studies/case_study_1/run.py) package
+      * for _EDBO_, `crossedBarrel_ebdo.py` is based on the file included in the [_EDBO_](https://github.com/b-shields/edbo/blob/master/experiments/edbo_demo_and_simulations.ipynb) package
   * The results and the files used to generate figures are available at [`z_results`](https://github.com/mjzhu-p/olympus/tree/pwas_comp/case_studies/case_study_pwas/z_comparisonStudy/crossed_barrel/z_results)
 
 * **Results**: 
@@ -149,7 +156,11 @@ As for the solvent design case study, due to the relatively large number of cons
       * Also formatted in this [Excel file](https://github.com/mjzhu-p/ExpDesign/blob/main/solvent%20design%20case%20study/solvent_list_matrix.xlsx)
 * **Notes on the code**:
   * Relevant folder: [`solvent design case study`](https://github.com/mjzhu-p/ExpDesign/tree/main/solvent%20design%20case%20study)
-  * The files needed to run _PWAS_ are included (`main.py`).
+  * `main.py`: run _PWAS_ to solve the case study
+  * `gc_lnkCal.py`: calculate the ln(K) data from group contribution
+  * `qm_simulator.py`: return the ln(k) value given the structure of the solvent, ln(k) value is obtained from quantum-mechanical (QM) calculations 
+  * `solvent_list_matrix.xlsx`: Excel file including the full feasible design space, bounds and constraints on the optimization variables, group contribution values
+      * This file is updated based on [Gui _et al_, 2023](https://www.sciencedirect.com/science/article/pii/S0098135423002156#sec4)
   * The results and the files used to generate figures are available at [`z_results`](https://github.com/mjzhu-p/ExpDesign/tree/main/solvent%20design%20case%20study/z_results)
 
 
