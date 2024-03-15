@@ -1,5 +1,4 @@
 # Calculate the lnK data from group contribution
-# TODO: add comments and notes
 
 import pandas as pd
 import numpy as np
