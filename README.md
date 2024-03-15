@@ -19,7 +19,7 @@
 <a name="description"></a>
 ## Description
 
-Experimental design aims to efficiently collect informative data and derive meaningful conclusions while operating within resource constraints. We propose the use of [_PWAS_](https://github.com/mjzhu-p/PWAS) (Piecewise Affine Surrogate-based optimization), designed to address the challenges posed by mixed-variable experimental designs. _PWAS_ enables the direct incorporation of discrete and mixed-variable decision variables, facilitating a more realistic representation of real-world problems. Moreover, _PWAS_ accommodates linear equality and inequality constraints commonly encountered in physical systems, ensuring feasible solutions are proposed. 
+Experimental design aims to efficiently collect informative data and derive meaningful conclusions while operating within resource constraints. We propose the use of a different framework with mixed-integer surrogates and acquisition functions, where we adopt[_PWAS_](https://github.com/mjzhu-p/PWAS) (Piecewise Affine Surrogate-based optimization), which is designed to address the challenges posed by mixed-variable problems subject to linear constraints. _PWAS_ enables the direct incorporation of discrete and mixed-variable decision variables, facilitating a more realistic representation of real-world problems. Moreover, _PWAS_ accommodates linear equality and inequality constraints commonly encountered in physical systems, ensuring feasible solutions are proposed. 
 
 We demonstrate the effectiveness of _PWAS_ in optimizing experimental designs through three case studies, each with a different size of design space and numerical complexity: 
 * Optimization of reaction conditions for **Suzuki–Miyaura cross-coupling** (fully categorical) 
@@ -28,7 +28,7 @@ We demonstrate the effectiveness of _PWAS_ in optimizing experimental designs th
 
 By comparing with conventional optimization algorithms, we offer insights into the practical applicability of _PWAS_.
 
-We refer readers to the [**manuscript**](toadd) for detailed discussions. 
+We refer readers to the [**paper**](toadd) for detailed discussions. 
 
 <a name="howto"></a>
 ## How to use this repository
