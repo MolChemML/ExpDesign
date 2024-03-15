@@ -4,6 +4,8 @@
 
 * [Description](#description)
 
+* [How to use this repository](#howto)
+
 * [PWAS](#pwas)
   
 * [Case studies](#casestudies)
@@ -27,6 +29,21 @@ We demonstrate the effectiveness of _PWAS_ in optimizing experimental designs th
 By comparing with conventional optimization algorithms, we offer insights into the practical applicability of _PWAS_.
 
 We refer readers to the [**manuscript**](toadd) for detailed discussions. 
+
+<a name="howto"></a>
+## How to use this repository
+The case studies and relevant files needed to reproduce the results in the paper are available. 
+
+First, we need to install the [_PWAS_](https://github.com/mjzhu-p/PWAS) package. 🔴IMPORTANT: there are **external** dependencies of _PWAS_. See the package [repository](https://github.com/mjzhu-p/PWAS) for the detailed installation instructions for the MILP solvers used by _PWAS_.
+
+Second, to run the case studies, you need to include the following additional packages to load the dataset and export the results:
+* [pandas](https://pypi.org/project/pandas/) >= 2.1.0
+* [openpyxl](https://pypi.org/project/openpyxl/) >= 3.1.2
+
+Other notes
+* We use the [_Olympus_](https://github.com/aspuru-guzik-group/olympus) package to run comparison studies. Please see the [forked version](https://github.com/mjzhu-p/olympus/tree/pwas_comp) for the relevant updates required to run the case studies.
+    * 🔴IMPORTANT: _Olympus_ require tensorflow==1.15, therefore, **python version < 3.8 is required **
+    * The `yml` file used by the authors is included: [`olympus_pwas_comp.yml`](https://github.com/MolChemML/ExpDesign/blob/main/utils/olympus_pwas_comp.yml)
 
 <a name="pwas"></a>
 ## PWAS
