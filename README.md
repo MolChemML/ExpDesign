@@ -19,7 +19,7 @@
 <a name="description"></a>
 ## Description
 
-Experimental design aims to efficiently collect informative data and derive meaningful conclusions while operating within resource constraints. We propose the use of a different framework with mixed-integer surrogates and acquisition functions, where we adopt[_PWAS_](https://github.com/mjzhu-p/PWAS) (Piecewise Affine Surrogate-based optimization), which is designed to address the challenges posed by mixed-variable problems subject to linear constraints. _PWAS_ enables the direct incorporation of discrete and mixed-variable decision variables, facilitating a more realistic representation of real-world problems. Moreover, _PWAS_ accommodates linear equality and inequality constraints commonly encountered in physical systems, ensuring feasible solutions are proposed. 
+Experimental design aims to efficiently collect informative data and derive meaningful conclusions while operating within resource constraints. We propose the use of a different framework with mixed-integer surrogates and acquisition functions, where we adopt [_PWAS_](https://github.com/mjzhu-p/PWAS) (Piecewise Affine Surrogate-based optimization), which is designed to address the challenges posed by mixed-variable problems subject to linear constraints. _PWAS_ enables the direct incorporation of discrete and mixed-variable decision variables, facilitating a more realistic representation of real-world problems. Moreover, _PWAS_ accommodates linear equality and inequality constraints commonly encountered in physical systems, ensuring feasible solutions are proposed. 
 
 We demonstrate the effectiveness of _PWAS_ in optimizing experimental designs through three case studies, each with a different size of design space and numerical complexity: 
 * Optimization of reaction conditions for **Suzuki–Miyaura cross-coupling** (fully categorical) 
@@ -42,7 +42,7 @@ git clone https://github.com/MolChemML/ExpDesign.git
 To run the case studies, the following steps need to be followed:
 
 First, install the [_PWAS_](https://github.com/mjzhu-p/PWAS) package. 
-  * 🔴IMPORTANT: there are **external** dependencies of _PWAS_. See the package [repository](https://github.com/mjzhu-p/PWAS) for the detailed installation instructions for the MILP solvers used by _PWAS_. You can either obtain a free [academic license](https://www.gurobi.com/academia/academic-program-and-licenses/) (if applicable) for [`GUROBI`](https://support.gurobi.com/hc/en-us/articles/14799677517585-Getting-Started-with-Gurobi-Optimizer) or download the free [`GLPK`](https://stackoverflow.com/questions/17513666/installing-glpk-gnu-linear-programming-kit-on-windows) package. We used `GUROBI` for our case studies.
+  * 🔴IMPORTANT: there are **external** dependencies of _PWAS_. See the package [repository](https://github.com/mjzhu-p/PWAS) for the detailed installation instructions for the MILP solvers used by _PWAS_. You can either obtain a free [academic license](https://www.gurobi.com/academia/academic-program-and-licenses/) (if applicable) for [`GUROBI`](https://support.gurobi.com/hc/en-us/articles/14799677517585-Getting-Started-with-Gurobi-Optimizer) or download the free [`GLPK`](https://stackoverflow.com/questions/17513666/installing-glpk-gnu-linear-programming-kit-on-windows) package or interface other MILP solvers following the instruction noted in [_PWAS_](https://github.com/mjzhu-p/PWAS). We used `GUROBI` for our case studies.
   * See an overview of _PWAS_ at [this section](#pwas)
 
 Second, to run the case studies, you need to include the following additional packages to load the dataset and export the results:
@@ -50,7 +50,7 @@ Second, to run the case studies, you need to include the following additional pa
 * [openpyxl](https://pypi.org/project/openpyxl/) >= 3.1.2
 
 Other notes:
-* For the information of each case study, please see the relevant folder noted at [Case studies](#casestudies)
+* For the information on each case study, please see the relevant folder noted at [Case studies](#casestudies)
 * We used the [_Olympus_](https://github.com/aspuru-guzik-group/olympus) package to run comparison studies. Please see the [forked version](https://github.com/mjzhu-p/olympus/tree/pwas_comp) for the relevant updates required to run the case studies.
     * 🔴IMPORTANT: _Olympus_ require tensorflow==1.15, therefore, **python version < 3.8 is required**
     * The `yml` file used by the authors to run the comparison studies is included: [`olympus_pwas_comp.yml`](https://github.com/MolChemML/ExpDesign/blob/main/utils/olympus_pwas_comp.yml)
