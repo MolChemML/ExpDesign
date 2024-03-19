@@ -39,9 +39,11 @@ df_eq = matrix_df_eq.iloc[1:, 1:]
 df_bd = matrix_df_bd.iloc[1:, 1:]
 
 # Replace NaN values with 0
-df_ineq = df_ineq.fillna(0)
-df_eq = df_eq.fillna(0)
-df_bd = df_bd.fillna(0)
+with pd.option_context("future.no_silent_downcasting", True):
+    # Included to ope with the FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version
+    df_ineq = df_ineq.fillna(0).infer_objects(copy=False)
+    df_eq = df_eq.fillna(0).infer_objects(copy=False)
+    df_bd = df_bd.fillna(0).infer_objects(copy=False)
 
 matrix_ineq = df_ineq.to_numpy()
 matrix_eq = df_eq.to_numpy()
@@ -109,6 +111,7 @@ delta = np.argmax(X1_encoded[:,] @ omega[:,].T + gamma, axis=1)
 # output the file solvent list to a separate Excel file
 # Iterate through the NumPy arrays and create a row for each
 import pandas as pd
+
 
 rows = []
 for gc in X1:
