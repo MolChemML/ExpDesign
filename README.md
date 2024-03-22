@@ -45,9 +45,12 @@ First, install the [_PWAS_](https://github.com/mjzhu-p/PWAS) package.
   * 🔴IMPORTANT: there are **external** dependencies of _PWAS_. See the package [repository](https://github.com/mjzhu-p/PWAS) for the detailed installation instructions for the MILP solvers used by _PWAS_. You can either obtain a free [academic license](https://www.gurobi.com/academia/academic-program-and-licenses/) (if applicable) for [`GUROBI`](https://support.gurobi.com/hc/en-us/articles/14799677517585-Getting-Started-with-Gurobi-Optimizer) or download the free [`GLPK`](https://stackoverflow.com/questions/17513666/installing-glpk-gnu-linear-programming-kit-on-windows) package or interface other MILP solvers following the instruction noted in [_PWAS_](https://github.com/mjzhu-p/PWAS). We used `GUROBI` for our case studies.
   * See an overview of _PWAS_ at [this section](#pwas)
 
-Second, to run the case studies, you need to include the following additional packages to load the dataset and export the results:
+Second, to run the case studies and the relevant analysis to generate figures, you need to include the following additional packages to load the dataset and export the results:
 * [pandas](https://pypi.org/project/pandas/) >= 2.1.0
 * [openpyxl](https://pypi.org/project/openpyxl/) >= 3.1.2
+* [seaborn](https://pypi.org/project/seaborn/) >= 0.13.2
+* [matplotlib](https://pypi.org/project/matplotlib/) >= 3.8.3
+* [sklearn](https://pypi.org/project/scikit-learn/) >= 1.3.0
 
 Other notes:
 * For the information on each case study, please see the relevant folder noted at [Case studies](#casestudies)
