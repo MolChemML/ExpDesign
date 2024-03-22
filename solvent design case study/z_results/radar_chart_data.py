@@ -5,10 +5,7 @@ import numpy as np
 
 def get_radarChart_data(x_complete):
     """
-    TODO: to add
-    Args:
-
-    Return:
+    used to get the data for the radar chart
 
     """
 

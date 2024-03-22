@@ -3,10 +3,7 @@ import pandas as pd
 import numpy as np
 def get_solventProperties_(x_complete):
     """
-    TODO: to add
-    Args:
-
-    Return:
+    Used to calculate solvent properties based on group contribution method of Sheldon et al, 2005
 
     """
 

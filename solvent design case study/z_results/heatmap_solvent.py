@@ -3,12 +3,12 @@
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-from sklearn.preprocessing import MinMaxScaler
+# from sklearn.preprocessing import MinMaxScaler
 
 matrix_excel_file = 'partition_analysis.xlsx'
 sheet_name_combined = 'combined'
 
-atom_groups = [
+functional_groups = [
     r'CH$_3$', r'CH$_2$', 'CH', 'C', r'CH$_2$=CH', 'CH=CH',
     r'CH$_2$=C', 'CH=C', 'C=C', 'aCH', 'aC', r'aCCH$_3$', r'aCCH$_2$', 'aCCH', 'OH', 'aCOH',
     r'CH$_3$CO', r'CH$_2$CO', 'CHO', r'CH$_3$COO', r'CH$_2$COO', r'CH$_3$O', r'CH$_2$O', 'CH-O', r'CH$_2$NH$_2$',
@@ -49,16 +49,16 @@ fig, (ax1, ax2, cbar_ax) = plt.subplots(nrows=3,ncols=1, figsize=(12, 16),
 # Heatmap 1: ordered in iteration
 cmap = 'YlGnBu'
 
-sns.heatmap(other_data, cmap=cmap, xticklabels =atom_groups, yticklabels=all_data.index+1, ax=ax1, cbar=False)
+sns.heatmap(other_data, cmap=cmap, xticklabels =functional_groups, yticklabels=all_data.index+1, ax=ax1, cbar=False)
 ax1.axhline(10, color='black', linewidth=2)
 
 # ax1.set_title('Sequential Iteration Order', fontsize=12, fontweight='bold')
 ax1.tick_params(labelsize = 10)
 ax1.set_ylabel('Iterations in sequential order', fontsize =13)
-ax1.set_xlabel('Atom groups', fontsize =13)
+ax1.set_xlabel('(a)', fontsize =13)
 
 # Heatmap 2: ordered in partition
-im = sns.heatmap(other_data_sorted, cmap=cmap, xticklabels =atom_groups, yticklabels=other_data_sorted.index+1, ax=ax2,cbar=False)
+im = sns.heatmap(other_data_sorted, cmap=cmap, xticklabels =functional_groups, yticklabels=other_data_sorted.index+1, ax=ax2,cbar=False)
 # Highlight the partition boundaries on heatmap 1
 for i, partition in enumerate(partitions):
     if i > 0:
@@ -66,7 +66,7 @@ for i, partition in enumerate(partitions):
 # ax2.set_title('Grouped in Partitions', fontsize=12, fontweight='bold')
 ax2.tick_params(labelsize = 10)
 ax2.set_ylabel('Iterations grouped in partitions', fontsize =13)
-
+ax2.set_xlabel('(b)', fontsize =13)
 
 
 
@@ -75,7 +75,7 @@ cbar_ax.tick_params(labelsize = 10)
 # cbar_ax.set_label('Number of each atom group in the solvent')
 mappable = im.get_children()[0]
 cbar1 = plt.colorbar(mappable,cax=cbar_ax, orientation="horizontal")
-cbar1.set_label('Number of each atom group in the solvent',fontsize = 13)
+cbar1.set_label('Number of each functional group in the solvent',fontsize = 13)
 
 # axes.set_title('Group contributions')
 # plt.subplots_adjust(right=0.99)
