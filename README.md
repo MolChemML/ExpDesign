@@ -96,7 +96,7 @@ As for the solvent design case study, due to the relatively large number of cons
 ### Suzuki–Miyaura cross-coupling
 
 <p align = "center">
-<img src="https://github.com/mjzhu-p/ExpDesign/blob/main/case%20study%20notes/suzuki_rxn.png" alt="drawing" width=60%/>
+<img src="https://github.com/mjzhu-p/ExpDesign/blob/main/case%20study%20notes/suzuki_rxn.png" alt="drawing" width=90%/>
 </p>
 
 * **Design space**: fully categorical
