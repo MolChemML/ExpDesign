@@ -88,7 +88,7 @@ For Suzuki coupling and crossed barrel case studies, we compare the performances
 Additionally, we also consider _Random Search_ as a baseline
 
 We note that _Random Search_, _Genetic_, _Hyperopt_, and _BoTorch_ have been interfaced in the [_Olympus_](https://github.com/aspuru-guzik-group/olympus) package; therefore, we use the algorithmic structure implemented in the
-package for benchmark tests with their default solver parameters. A customized forked version tailored for our testing is also available on GitHub at \url{https://github.com/mjzhu-p/olympus/tree/pwas_comp} (Branch “pwas_comp“), which you can see all the modifications. Note, some modifications are only necessary for Windows systems.
+package for benchmark tests with their default solver parameters. A customized forked version tailored for our testing is also available on GitHub at [Branch “pwas_comp“](https://github.com/mjzhu-p/olympus/tree/pwas_comp), which you can see all the modifications. Note, some modifications are only necessary for Windows systems.
 
 The tests were repeated **30** times. Within each run, the maximum iteration was set to **50**, with 10 initial samples.
 
