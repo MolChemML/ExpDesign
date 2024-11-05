@@ -18,7 +18,7 @@
 
 <a name="description"></a>
 ## Description
-**Digital Discovery**: [Link](https://doi.org/10.1039/D4DD00113C)
+**Full paper link**: [Link](https://doi.org/10.1039/D4DD00113C)
 
 Experimental design aims to efficiently collect informative data and derive meaningful conclusions while operating within resource constraints. We propose the use of a different framework with mixed-integer surrogates and acquisition functions, where we adopt [_PWAS_](https://github.com/mjzhu-p/PWAS) (Piecewise Affine Surrogate-based optimization), which is designed to address the challenges posed by mixed-variable problems subject to linear constraints. _PWAS_ enables the direct incorporation of discrete and mixed-variable decision variables, facilitating a more realistic representation of real-world problems. Moreover, _PWAS_ accommodates linear equality and inequality constraints commonly encountered in physical systems, ensuring feasible solutions are proposed. 
 
