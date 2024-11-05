@@ -1,4 +1,4 @@
-# Supplementary material for "[_Discrete and mixed-variable experimental design with surrogate-based approach_](https://chemrxiv.org/engage/chemrxiv/article-details/66fc8a1751558a15efc1a501)"
+# Supplementary material for "[_Discrete and mixed-variable experimental design with surrogate-based approach_](https://doi.org/10.1039/D4DD00113C)"
 
 # Contents
 
@@ -18,7 +18,7 @@
 
 <a name="description"></a>
 ## Description
-**ChemRxiv preprint**: [Link](https://chemrxiv.org/engage/chemrxiv/article-details/66fc8a1751558a15efc1a501)
+**Digital Discovery**: [Link](https://doi.org/10.1039/D4DD00113C)
 
 Experimental design aims to efficiently collect informative data and derive meaningful conclusions while operating within resource constraints. We propose the use of a different framework with mixed-integer surrogates and acquisition functions, where we adopt [_PWAS_](https://github.com/mjzhu-p/PWAS) (Piecewise Affine Surrogate-based optimization), which is designed to address the challenges posed by mixed-variable problems subject to linear constraints. _PWAS_ enables the direct incorporation of discrete and mixed-variable decision variables, facilitating a more realistic representation of real-world problems. Moreover, _PWAS_ accommodates linear equality and inequality constraints commonly encountered in physical systems, ensuring feasible solutions are proposed. 
 
@@ -29,7 +29,7 @@ We demonstrate the effectiveness of _PWAS_ in optimizing experimental designs th
 
 By comparing with conventional optimization algorithms, we offer insights into the practical applicability of _PWAS_.
 
-We refer readers to the [**paper**](https://chemrxiv.org/engage/chemrxiv/article-details/66fc8a1751558a15efc1a501) for detailed discussions. 
+We refer readers to the [**paper**](https://doi.org/10.1039/D4DD00113C) for detailed discussions. 
 
 <a name="howto"></a>
 ## How to use this repository
@@ -199,9 +199,10 @@ This repository is distributed without any warranty. Please cite the paper below
 ```
 @article{ExpDesign2024,
   title={Discrete and mixed-variable experimental design with surrogate-based approach},
-  author={Zhu, Mengjia and Mroz, Austin and Gui, Lingfeng and Jelfs, Kim and Bemporad, Alberto and del Río Chanona, Ehecatl Antonio and Lee, Ye Seol},
-  journal={ChemRxiv preprint  doi:10.26434/chemrxiv-2024-h37x4},
-  year={2024}
+  author={Zhu, Mengjia and Mroz, Austin and Gui, Lingfeng and Jelfs, Kim E and Bemporad, Alberto and Chanona, Antonio Del Rio and Lee, Ye Seol},
+  journal={Digital Discovery},
+  year={2024},
+  publisher={Royal Society of Chemistry}
 }
 ```
 
