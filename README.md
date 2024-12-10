@@ -198,11 +198,16 @@ This repository is distributed without any warranty. Please cite the paper below
 <a name="ref1"></a>
 ```
 @article{ExpDesign2024,
-  title={Discrete and mixed-variable experimental design with surrogate-based approach},
-  author={Zhu, Mengjia and Mroz, Austin and Gui, Lingfeng and Jelfs, Kim E and Bemporad, Alberto and Chanona, Antonio Del Rio and Lee, Ye Seol},
-  journal={Digital Discovery},
-  year={2024},
-  publisher={Royal Society of Chemistry}
+author ="Zhu, Mengjia and Mroz, Austin and Gui, Lingfeng and Jelfs, Kim E. and Bemporad, Alberto and del Río Chanona, Ehecatl Antonio and Lee, Ye Seol",
+title  ="Discrete and mixed-variable experimental design with surrogate-based approach",
+journal  ="Digital Discovery",
+year  ="2024",
+volume  ="3",
+issue  ="12",
+pages  ="2589-2606",
+publisher  ="RSC",
+doi  ="10.1039/D4DD00113C",
+url  ="http://dx.doi.org/10.1039/D4DD00113C",
 }
 ```
 
